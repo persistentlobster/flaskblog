@@ -1,5 +1,7 @@
 env/
 __pycache__/
+flaskblog/static/profile_pics/*
+!flaskblog/static/profile_pics/default.jpg
 .vscode/
 *.db
 .DS_Store
