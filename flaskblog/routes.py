@@ -8,25 +8,26 @@ from flaskblog.models import User, Post
 from flask_login import login_user, logout_user, current_user, login_required
 
 
-posts = [
-    {
-        'author': 'Micah',
-        'title': 'Blog Post 1',
-        'content': 'First Post Content',
-        'date_posted': 'Sept 8, 2020'
-    },
-    {
-        'author': 'Bob',
-        'title': 'Blog Post 2',
-        'content': 'Second Post Content',
-        'date_posted': 'Sept 12, 2020'
-    }
-]
+# posts = [
+#     {
+#         'author': 'Micah',
+#         'title': 'Blog Post 1',
+#         'content': 'First Post Content',
+#         'date_posted': 'Sept 8, 2020'
+#     },
+#     {
+#         'author': 'Bob',
+#         'title': 'Blog Post 2',
+#         'content': 'Second Post Content',
+#         'date_posted': 'Sept 12, 2020'
+#     }
+# ]
 
 
 @app.route('/')
 @app.route('/home')
 def home():
+    posts = Post.query.all()
     return render_template('home.html', posts=posts)
 
 
