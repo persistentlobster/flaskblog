@@ -5,3 +5,4 @@ flaskblog/static/profile_pics/*
 .vscode/
 *.db
 .DS_Store
+.env
